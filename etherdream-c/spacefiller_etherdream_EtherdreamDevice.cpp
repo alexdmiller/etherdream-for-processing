@@ -51,21 +51,47 @@ JNIEXPORT void JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceDiscon
     etherdream_disconnect(device);
 }
 
-///*
-// * Class:     spacefiller_etherdream_EtherdreamDevice
-// * Method:    deviceReady
-// * Signature: (I)Z
-// */
-//JNIEXPORT jboolean JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceReady
-//        (JNIEnv *, jobject, jint);
-//
-///*
-// * Class:     spacefiller_etherdream_EtherdreamDevice
-// * Method:    deviceWrite
-// * Signature: (I[Lspacefiller/ilda/IldaPoint;II)I
-// */
-//JNIEXPORT jint JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceWrite
-//        (JNIEnv *, jobject, jint, jobjectArray, jint, jint);
+/*
+ * Class:     spacefiller_etherdream_EtherdreamDevice
+ * Method:    deviceReady
+ * Signature: (I)Z
+ */
+JNIEXPORT jboolean JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceReady
+        (JNIEnv *, jobject, jint deviceID) {
+    struct etherdream * device = etherdream_get(deviceID);
+    return etherdream_is_ready(device);
+}
+
+
+/*
+ * Class:     spacefiller_etherdream_EtherdreamDevice
+ * Method:    deviceWrite
+ * Signature: (I[Lspacefiller/ilda/IldaPoint;II)I
+ */
+JNIEXPORT jint JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceWrite
+        (JNIEnv * env, jobject, jint deviceID, jobjectArray javaPoints, jint numPoints, jint pps) {
+    etherdream_point points[numPoints];
+    for (int i = 0; i < numPoints; i++) {
+        jobject javaPoint = env->GetObjectArrayElement(javaPoints, i);
+        jclass clazz = env->GetObjectClass(javaPoint);
+
+        points[i].x = (int16_t) env->GetDoubleField(javaPoint, env->GetFieldID(clazz, "x", "F")) * 32767;
+        points[i].y = (int16_t) env->GetDoubleField(javaPoint, env->GetFieldID(clazz, "y", "F")) * 32767;
+        points[i].r = env->GetDoubleField(javaPoint, env->GetFieldID(clazz, "r", "F")) * 65535;
+        points[i].g = env->GetDoubleField(javaPoint, env->GetFieldID(clazz, "g", "F")) * 65535;
+        points[i].b = env->GetDoubleField(javaPoint, env->GetFieldID(clazz, "b", "F")) * 65535;
+        points[i].i = env->GetDoubleField(javaPoint, env->GetFieldID(clazz, "a", "F")) * 65535;
+    }
+
+    struct etherdream * device = etherdream_get(deviceID);
+    return etherdream_write(device, points, numPoints, pps, -1);
+}
+
+JNIEXPORT void JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceWaitUntilReady
+        (JNIEnv *, jobject, jint deviceID) {
+    struct etherdream * device = etherdream_get(deviceID);
+    etherdream_wait_for_ready(device);
+}
 
 #ifdef __cplusplus
 }

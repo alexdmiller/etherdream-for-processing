@@ -41,6 +41,14 @@ JNIEXPORT void JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceDiscon
 
 /*
  * Class:     spacefiller_etherdream_EtherdreamDevice
+ * Method:    deviceWaitUntilReady
+ * Signature: (I)V
+ */
+JNIEXPORT void JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceWaitUntilReady
+  (JNIEnv *, jobject, jint);
+
+/*
+ * Class:     spacefiller_etherdream_EtherdreamDevice
  * Method:    deviceReady
  * Signature: (I)Z
  */

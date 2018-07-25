@@ -1,9 +1,9 @@
 package spacefiller.ilda;
 
 public class IldaPoint {
-  public double x, y, r, g, b, a;
+  public float x, y, r, g, b, a;
 
-  public IldaPoint(double x, double y, double r, double g, double b, double a) {
+  public IldaPoint(float x, float y, float r, float g, float b, float a) {
     this.x = x;
     this.y = y;
     this.r = r;

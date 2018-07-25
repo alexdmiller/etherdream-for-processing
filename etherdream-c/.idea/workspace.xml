@@ -35,8 +35,8 @@
       <file leaf-file-name="etherdream.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/etherdream.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="961" selection-start-line="961" selection-end-line="961" selection-end-column="19" />
+            <state relative-caret-position="280">
+              <caret line="518" column="1" lean-forward="true" selection-start-line="518" selection-start-column="1" selection-end-line="518" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -44,8 +44,8 @@
       <file leaf-file-name="spacefiller_etherdream_EtherdreamDevice.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spacefiller_etherdream_EtherdreamDevice.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="33" selection-start-line="33" selection-end-line="39" selection-end-column="28" />
+            <state relative-caret-position="285">
+              <caret line="46" selection-start-line="46" selection-end-line="47" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -53,8 +53,8 @@
       <file leaf-file-name="spacefiller_etherdream_EtherdreamDevice.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spacefiller_etherdream_EtherdreamDevice.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="305">
+              <caret line="80" column="77" selection-start-line="80" selection-start-column="77" selection-end-line="80" selection-end-column="77" />
               <folding>
                 <element signature="e#38#64#0" expanded="true" />
               </folding>
@@ -65,8 +65,8 @@
       <file leaf-file-name="etherdream.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/etherdream.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="68" column="22" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="22" />
+            <state relative-caret-position="-1571">
+              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -80,15 +80,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jni.h" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/include/jni.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4686">
-              <caret line="213" column="7" selection-start-line="213" selection-start-column="7" selection-end-line="213" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -96,6 +87,9 @@
       <find>jenv</find>
       <find>JNIEnv</find>
       <find>etherdream_write</find>
+      <find>M: N</find>
+      <find>write</find>
+      <find>etherdream_wait_for_ready</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -116,6 +110,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-327" />
     <option name="y" value="23" />
@@ -188,15 +183,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10874000" />
+    <option name="totallyTimeSpent" value="15312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" visible="true" weight="0.3278856" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.3278856" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.3299285" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
@@ -269,22 +264,8 @@
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/include/darwin/jni_md.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spacefiller_etherdream_EtherdreamDevice.c" />
     <entry file="file://$PROJECT_DIR$/test.h" />
-    <entry file="file:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/include/jni.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4686">
-          <caret line="213" column="7" selection-start-line="213" selection-start-column="7" selection-end-line="213" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7177" />
@@ -295,6 +276,34 @@
         <state relative-caret-position="-16" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/etherdream.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1571">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/include/jni.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="66" column="10" lean-forward="true" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home/include/darwin/jni_md.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spacefiller_etherdream_EtherdreamDevice.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="46" selection-start-line="46" selection-end-line="47" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -302,31 +311,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/etherdream.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="68" column="22" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/etherdream.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="961" selection-start-line="961" selection-end-line="961" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spacefiller_etherdream_EtherdreamDevice.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="33" selection-start-line="33" selection-end-line="39" selection-end-column="28" />
+        <state relative-caret-position="280">
+          <caret line="518" column="1" lean-forward="true" selection-start-line="518" selection-start-column="1" selection-end-line="518" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spacefiller_etherdream_EtherdreamDevice.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="39" column="38" lean-forward="true" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        <state relative-caret-position="305">
+          <caret line="80" column="77" selection-start-line="80" selection-start-column="77" selection-end-line="80" selection-end-column="77" />
           <folding>
             <element signature="e#38#64#0" expanded="true" />
           </folding>
