@@ -11,18 +11,31 @@ class EtherdreamDeviceTest {
   private EtherdreamDevice device;
 
   @BeforeEach
-  public void setup() {
+  public void setup() throws InterruptedException {
     device = new EtherdreamDevice();
     device.connect(0);
   }
 
   @AfterEach
   public void teardown() {
-    device.disconnect();
+    if (device.isConnected()) device.disconnect();
   }
 
   @Test
   public void connect() throws InterruptedException {
-    Thread.sleep(1000);
+    assertEquals(true, device.isConnected());
+  }
+
+  @Test
+  public void disconnect() throws InterruptedException {
+    device.disconnect();
+
+    assertEquals(false, device.isConnected());
+  }
+
+
+  @Test
+  public void dacCount() {
+    assertEquals(1, EtherdreamDevice.dacCount());
   }
 }

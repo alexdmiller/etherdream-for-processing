@@ -10,30 +10,45 @@ public class EtherdreamDevice implements Runnable {
     System.loadLibrary("EtherdreamJNI");
   }
 
-  private boolean deviceFound;
+  private static boolean libraryStarted = false;
+
+  private static native void libStart();
+  public static native int dacCount();
+
+  private boolean connected;
   private List<IldaPoint> points;
   private Thread thread;
   private int deviceID;
 
   public EtherdreamDevice() {
-    deviceFound = false;
+    connected = false;
     points = new ArrayList<>();
     thread = new Thread(this);
   }
 
-  private native void lib_start();
-  private native int dac_count();
-  private native int device_connect(int deviceID);
-  private native boolean device_ready();
-  private native int device_write(int deviceID, IldaPoint[] points, int length, int pps);
+  private native int deviceConnect(int deviceID);
+  private native void deviceDisconnect(int deviceID);
+  private native boolean deviceReady(int deviceID);
+  private native int deviceWrite(int deviceID, IldaPoint[] points, int length, int pps);
 
-  public void connect(int id) {
+  public void connect(int id) throws InterruptedException {
+    if (!libraryStarted) {
+      libStart();
+      libraryStarted = true;
+
+      // Sleep a little so DAC can be found
+      Thread.sleep(1000);
+    }
+
     deviceID = id;
+    connected = deviceConnect(deviceID) == 0;
     thread.start();
   }
 
   public void disconnect() {
     thread.interrupt();
+    deviceDisconnect(deviceID);
+    connected = false;
   }
 
   public void addPoints(List<IldaPoint> points) {
@@ -44,14 +59,13 @@ public class EtherdreamDevice implements Runnable {
     this.points = points;
   }
 
-  public boolean isDeviceFound() {
-    return deviceFound;
+  public boolean isConnected() {
+    return connected;
   }
 
   @Override
   public void run() {
     while (!thread.isInterrupted()) {
-      System.out.println("yeah");
       try {
         Thread.sleep(100);
       } catch (InterruptedException e) {

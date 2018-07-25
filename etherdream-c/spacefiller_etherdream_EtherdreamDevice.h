@@ -9,42 +9,50 @@ extern "C" {
 #endif
 /*
  * Class:     spacefiller_etherdream_EtherdreamDevice
- * Method:    lib_start
+ * Method:    libStart
  * Signature: ()V
  */
-JNIEXPORT void JNICALL Java_spacefiller_etherdream_EtherdreamDevice_lib_1start
-  (JNIEnv *, jobject);
+JNIEXPORT void JNICALL Java_spacefiller_etherdream_EtherdreamDevice_libStart
+  (JNIEnv *, jclass);
 
 /*
  * Class:     spacefiller_etherdream_EtherdreamDevice
- * Method:    dac_count
+ * Method:    dacCount
  * Signature: ()I
  */
-JNIEXPORT jint JNICALL Java_spacefiller_etherdream_EtherdreamDevice_dac_1count
-  (JNIEnv *, jobject);
+JNIEXPORT jint JNICALL Java_spacefiller_etherdream_EtherdreamDevice_dacCount
+  (JNIEnv *, jclass);
 
 /*
  * Class:     spacefiller_etherdream_EtherdreamDevice
- * Method:    device_connect
+ * Method:    deviceConnect
  * Signature: (I)I
  */
-JNIEXPORT jint JNICALL Java_spacefiller_etherdream_EtherdreamDevice_device_1connect
+JNIEXPORT jint JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceConnect
   (JNIEnv *, jobject, jint);
 
 /*
  * Class:     spacefiller_etherdream_EtherdreamDevice
- * Method:    device_ready
- * Signature: ()Z
+ * Method:    deviceDisconnect
+ * Signature: (I)V
  */
-JNIEXPORT jboolean JNICALL Java_spacefiller_etherdream_EtherdreamDevice_device_1ready
-  (JNIEnv *, jobject);
+JNIEXPORT void JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceDisconnect
+  (JNIEnv *, jobject, jint);
 
 /*
  * Class:     spacefiller_etherdream_EtherdreamDevice
- * Method:    device_write
+ * Method:    deviceReady
+ * Signature: (I)Z
+ */
+JNIEXPORT jboolean JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceReady
+  (JNIEnv *, jobject, jint);
+
+/*
+ * Class:     spacefiller_etherdream_EtherdreamDevice
+ * Method:    deviceWrite
  * Signature: (I[Lspacefiller/ilda/IldaPoint;II)I
  */
-JNIEXPORT jint JNICALL Java_spacefiller_etherdream_EtherdreamDevice_device_1write
+JNIEXPORT jint JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceWrite
   (JNIEnv *, jobject, jint, jobjectArray, jint, jint);
 
 #ifdef __cplusplus
