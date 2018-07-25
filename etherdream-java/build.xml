@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="etherdream-java">
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/etherdream-java.jar" basedir="build/classes">
+        </jar>
+    </target>
+
+    <target name="generate headers">
+        <javah classpath="build/classes" destdir="../etherdream-c">
+            <class name="spacefiller.etherdream.EtherdreamDevice" />
+        </javah>
+    </target>
+</project>

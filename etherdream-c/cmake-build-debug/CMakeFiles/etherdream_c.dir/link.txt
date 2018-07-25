@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc libetherdream_c.a  CMakeFiles/etherdream_c.dir/spacefiller_etherdream_EtherdreamDevice.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib libetherdream_c.a

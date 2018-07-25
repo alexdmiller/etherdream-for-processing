@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -dynamiclib -Wl,-headerpad_max_install_names  -o libEtherdreamJNI.dylib -install_name @rpath/libEtherdreamJNI.dylib CMakeFiles/EtherdreamJNI.dir/etherdream.c.o CMakeFiles/EtherdreamJNI.dir/spacefiller_etherdream_EtherdreamDevice.cpp.o 

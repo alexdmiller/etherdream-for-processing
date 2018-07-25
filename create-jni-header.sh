@@ -1,0 +1,1 @@
+javac -h etherdream-c/ etheretherdream-java/src/spacefiller/**/*.java

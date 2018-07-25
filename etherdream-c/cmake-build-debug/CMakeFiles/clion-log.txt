@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/miller/Projects/etherdream/etherdream-c
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/miller/Projects/etherdream/etherdream-c/cmake-build-debug
