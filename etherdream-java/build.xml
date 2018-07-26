@@ -16,9 +16,18 @@
         </jar>
     </target>
 
-    <target name="generate headers">
+    <target name="generate-headers">
         <javah classpath="build/classes" destdir="../etherdream-c">
             <class name="spacefiller.etherdream.EtherdreamDevice" />
         </javah>
+    </target>
+
+    <target name="run-festival">
+        <java
+                classpath="build/classes"
+                classname="spacefiller.festival.Festival"
+                fork="true">
+            <jvmarg value="-Djava.library.path=../etherdream-c/cmake-build-debug/" />
+        </java>
     </target>
 </project>
