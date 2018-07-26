@@ -54,8 +54,8 @@
       <file leaf-file-name="build.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="330">
+              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -164,42 +164,6 @@
             <path>
               <item name="etherdream-java" type="b2602c69:ProjectViewProjectNode" />
               <item name="etherdream-java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="etherdream-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="etherdream-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="etherdream-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="etherdream-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="spacefiller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="etherdream-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="etherdream-java" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="spacefiller" type="462c0819:PsiDirectoryNode" />
-              <item name="festival" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="etherdream-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="etherdream-java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="etherdream-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="etherdream-java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="spacefiller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="etherdream-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="etherdream-java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="spacefiller" type="462c0819:PsiDirectoryNode" />
-              <item name="etherdream" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -360,7 +324,7 @@
       <updated>1532492176466</updated>
       <workItem from="1532492179167" duration="2249000" />
       <workItem from="1532530652395" duration="7376000" />
-      <workItem from="1532568583595" duration="4936000" />
+      <workItem from="1532568583595" duration="5814000" />
     </task>
     <servers />
   </component>
@@ -397,7 +361,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24345000" />
+    <option name="totallyTimeSpent" value="25223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
@@ -418,11 +382,11 @@
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="right" id="Remote Host" order="3" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2550586" />
       <window_info anchor="bottom" id="Statistic" order="7" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="right" id="Ant Build" order="1" visible="true" weight="0.12300319" />
+      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.12300319" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -659,8 +623,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="330">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
         </state>
       </provider>
     </entry>
