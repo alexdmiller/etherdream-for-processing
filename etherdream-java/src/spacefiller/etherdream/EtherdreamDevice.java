@@ -61,6 +61,10 @@ public class EtherdreamDevice implements Runnable {
     this.points.addAll(points);
   }
 
+  public void clearPoints() {
+    this.points.clear();
+  }
+
   public boolean isConnected() {
     return connected;
   }
@@ -72,16 +76,8 @@ public class EtherdreamDevice implements Runnable {
       synchronized (points) {
         int success = deviceWrite(deviceID, points.toArray(new IldaPoint[points.size()]), points.size(), 30000);
         if (success != 0) {
-          System.out.println("Write failed");
-        } else {
-          System.out.println("Write succeeded!");
+          System.out.println("Write failed; error id = " + success);
         }
-      }
-
-      try {
-        Thread.sleep(100);
-      } catch (InterruptedException e) {
-        e.printStackTrace();
       }
     }
   }

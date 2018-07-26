@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="etherdream-java:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/etherdream_java_jar</output-path>
+    <root id="archive" name="etherdream-java.jar">
+      <element id="module-output" name="etherdream-java" />
+    </root>
+  </artifact>
+</component>

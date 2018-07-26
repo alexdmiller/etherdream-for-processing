@@ -74,15 +74,13 @@ JNIEXPORT jint JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceWrite
     for (int i = 0; i < numPoints; i++) {
         jobject javaPoint = env->GetObjectArrayElement(javaPoints, i);
         jclass clazz = env->GetObjectClass(javaPoint);
-
-        points[i].x = (int16_t) env->GetDoubleField(javaPoint, env->GetFieldID(clazz, "x", "F")) * 32767;
-        points[i].y = (int16_t) env->GetDoubleField(javaPoint, env->GetFieldID(clazz, "y", "F")) * 32767;
-        points[i].r = env->GetDoubleField(javaPoint, env->GetFieldID(clazz, "r", "F")) * 65535;
-        points[i].g = env->GetDoubleField(javaPoint, env->GetFieldID(clazz, "g", "F")) * 65535;
-        points[i].b = env->GetDoubleField(javaPoint, env->GetFieldID(clazz, "b", "F")) * 65535;
-        points[i].i = env->GetDoubleField(javaPoint, env->GetFieldID(clazz, "a", "F")) * 65535;
+        points[i].x = env->GetFloatField(javaPoint, env->GetFieldID(clazz, "x", "F")) * 32767;
+        points[i].y = env->GetFloatField(javaPoint, env->GetFieldID(clazz, "y", "F")) * 32767;
+        points[i].r = env->GetFloatField(javaPoint, env->GetFieldID(clazz, "r", "F")) * 65535;
+        points[i].g = env->GetFloatField(javaPoint, env->GetFieldID(clazz, "g", "F")) * 65535;
+        points[i].b = env->GetFloatField(javaPoint, env->GetFieldID(clazz, "b", "F")) * 65535;
+        points[i].i = env->GetFloatField(javaPoint, env->GetFieldID(clazz, "a", "F")) * 65535;
     }
-
     struct etherdream * device = etherdream_get(deviceID);
     return etherdream_write(device, points, numPoints, pps, -1);
 }

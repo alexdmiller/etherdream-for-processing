@@ -47,13 +47,14 @@ class EtherdreamDeviceTest {
   public void sendPoints() throws InterruptedException {
     List<IldaPoint> points = new ArrayList<>();
 
-    for (int i = 0; i < 1000; i++) {
-      points.add(new IldaPoint(i / 500f, 0f, 1, 1, 1, 1));
+    for (int i = 0; i < 2000; i++) {
+      points.add(new IldaPoint(
+          (float) (Math.cos(i / 1000f * 2 * Math.PI) * 0.9),
+          (float) (Math.sin(i / 1000f * 2 * Math.PI) * 0.9),
+          1, 1, 1, 1));
     }
     device.setPoints(points);
 
     Thread.sleep(5000);
-
-    System.out.println("end test");
   }
 }
