@@ -37,6 +37,10 @@ JNIEXPORT jint JNICALL Java_spacefiller_etherdream_EtherdreamDevice_dacCount
 JNIEXPORT jint JNICALL Java_spacefiller_etherdream_EtherdreamDevice_deviceConnect
         (JNIEnv *, jobject, jint deviceID) {
     struct etherdream * device = etherdream_get(deviceID);
+    if (device == NULL) {
+        return -1;
+    }
+
     return etherdream_connect(device);
 }
 
