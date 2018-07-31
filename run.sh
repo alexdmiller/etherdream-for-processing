@@ -1,0 +1,1 @@
+java -Djava.library.path=etherdream-c/cmake-build-debug/ -jar etherdream-java/build/jar/etherdream-java.jar

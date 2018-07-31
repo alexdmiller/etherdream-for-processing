@@ -21,7 +21,7 @@
         </javac>
     </target>
 
-    <target name="jar">
+    <target name="jar" depends="compile">
         <mkdir dir="build/jar"/>
 
         <jar destfile="build/jar/etherdream-java.jar" basedir="build/classes">
