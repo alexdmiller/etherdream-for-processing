@@ -3,3 +3,4 @@ vcs.xml
 etherdream-c/cmake-build-debug/CMakeFiles
 etherdream-java/build
 *.so
+workspace.xml
