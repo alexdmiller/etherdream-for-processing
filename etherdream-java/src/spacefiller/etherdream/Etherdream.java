@@ -47,18 +47,37 @@ public class Etherdream {
     if (debugDraw) {
       parent.strokeWeight(2);
       for (EtherdreamDevice device : devices.values()) {
+        float lastScreenX = device.points.get(0).x * parent.width + parent.width / 2;
+        float lastScreenY = device.points.get(0).y * parent.height + parent.height / 2;
+
         for (IldaPoint point : device.points) {
-          if (point.a > 0) {
-            parent.strokeWeight(2);
-            parent.stroke(parent.color(point.r, point.g, point.b));
-            parent.stroke(255);
-            parent.point(point.x * parent.width + parent.width / 2, point.y * parent.height + parent.height / 2);
-          } else {
-            parent.noFill();
-            parent.stroke(255);
-            parent.strokeWeight(1);
-            parent.ellipse(point.x * parent.width + parent.width / 2, point.y * parent.height + parent.height / 2, 10, 10);
+          float screenX = point.x * parent.width + parent.width / 2;
+          float screenY = point.y * parent.height + parent.height / 2;
+
+          if (screenX != lastScreenX && screenY != lastScreenY) {
+            if (point.a > 0) {
+              parent.strokeWeight(1);
+              parent.stroke(parent.color(point.r, point.g, point.b));
+              parent.line(lastScreenX, lastScreenY, screenX, screenY);
+
+              parent.strokeWeight(3);
+              parent.stroke(parent.color(point.r, point.g, point.b));
+              parent.stroke(255);
+              parent.point(screenX, screenY);
+            } else {
+              parent.strokeWeight(1);
+              parent.stroke(100);
+              parent.line(lastScreenX, lastScreenY, screenX, screenY);
+
+              parent.noFill();
+              parent.stroke(255);
+              parent.strokeWeight(1);
+              parent.ellipse(screenX, screenY, 10, 10);
+            }
           }
+
+          lastScreenX = screenX;
+          lastScreenY = screenY;
         }
       }
     }

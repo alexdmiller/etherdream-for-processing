@@ -62,6 +62,10 @@ public class EtherdreamDevice implements Runnable {
     this.points.addAll(points);
   }
 
+  public void addPoint(IldaPoint point) {
+    this.points.add(point);
+  }
+
   public void setPoints(List<IldaPoint> points) {
     this.points.clear();
     this.points.addAll(points);

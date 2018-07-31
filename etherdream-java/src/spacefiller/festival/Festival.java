@@ -10,9 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Festival extends PApplet {
-  private static final int REPEAT_POINTS = 20;
-  private float lastX = -1;
-  private float lastY = -1;
+  static final int REPEAT_POINTS = 20;
 
   public static void main(String[] args) {
     PApplet.main("spacefiller.festival.Festival");
@@ -22,6 +20,8 @@ public class Festival extends PApplet {
   Etherdream etherdream;
   RGroup group;
   RShape laserCursor;
+
+  Mode currentMode;
 
   @Override
   public void settings() {
@@ -43,66 +43,27 @@ public class Festival extends PApplet {
     device = etherdream.connect();
 
     etherdream.debugDraw();
-  }
 
-  @Override
-  public void keyPressed() {
-    group.addElement(new RShape());
-    lastX = -1;
-    lastY = -1;
-  }
-
-  @Override
-  public void mousePressed() {
-    if (lastX == -1 && lastY == -1) {
-      lastX = mouseX;
-      lastY = mouseY;
-    } else {
-      RShape shape = (RShape) group.elements[group.elements.length - 1];
-
-      RPath path = new RPath();
-      RCommand lineCommand = new RCommand(lastX, lastY, mouseX, mouseY);
-      path.addCommand(lineCommand);
-      shape.addPath(path);
-
-      group.elements[group.elements.length - 1] = new RShape(shape);
-      lastX = mouseX;
-      lastY = mouseY;
-    }
+    currentMode = new EditMode(this);
   }
 
   @Override
   public void draw() {
     background(0);
-
-    laserCursor.translate(mouseX - laserCursor.getX() - laserCursor.getWidth() / 2,
-        mouseY - laserCursor.getY() - laserCursor.getWidth() / 2);
-
-    strokeWeight(1);
-    stroke(255);
-    noFill();
-//    group.draw(this);
-
-    List<IldaPoint> points = new ArrayList<>();
-
-    strokeWeight(3);
-    for (RGeomElem s : group.elements) {
-      if (s.getCurveLength() > 0) {
-        addPoint(s.getPoint(0), points, REPEAT_POINTS, 0);
-
-        for (float t = 0; t <= s.getCurveLength(); t += 5) {
-          RPoint point = s.getPoint(t / s.getCurveLength());
-          addPoint(point, points, 1, 1);
-        }
-
-        addPoint(s.getPoints()[s.getPoints().length - 1], points, REPEAT_POINTS, 0);
-      }
-    }
-
-    device.setPoints(points);
   }
 
-  private void addPoint(RPoint point, List<IldaPoint> ildaPoints, int repeat, float a) {
+  @Override
+  public void keyPressed() {
+    if (key == 'a') {
+      currentMode.stop();
+      currentMode = new AnimateMode(this);
+    } else if (key == 'e') {
+      currentMode.stop();
+      currentMode = new EditMode(this);
+    }
+  }
+
+  void addPoint(RPoint point, List<IldaPoint> ildaPoints, int repeat, float a) {
     for (int i = 0; i < repeat; i++) {
       ildaPoints.add(new IldaPoint((point.x - width / 2) / width, (point.y - height / 2) / height, a, a, a, a));
     }
