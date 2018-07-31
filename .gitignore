@@ -1,6 +1,7 @@
 vcs.xml
 .DS_Store
 etherdream-c/cmake-build-debug/CMakeFiles
-etherdream-java/build
+etherdream-java/build/classes
+etherdream-java/build/test
 *.so
 workspace.xml
