@@ -16,8 +16,9 @@ public class EtherdreamDevice implements Runnable {
   private static native void libStart();
   public static native int dacCount();
 
+  protected final List<IldaPoint> points = Collections.synchronizedList(new ArrayList<>());
+
   private boolean connected;
-  private final List<IldaPoint> points = Collections.synchronizedList(new ArrayList<>());
   private Thread thread;
   private int deviceID;
 
@@ -43,17 +44,26 @@ public class EtherdreamDevice implements Runnable {
 
     deviceID = id;
     connected = deviceConnect(deviceID) == 0;
-    thread.start();
+
+    if (connected) {
+      thread.start();
+    }
   }
 
   public void disconnect() {
-    thread.interrupt();
-    deviceDisconnect(deviceID);
-    connected = false;
+    if (connected) {
+      thread.interrupt();
+      deviceDisconnect(deviceID);
+      connected = false;
+    }
   }
 
   public void addPoints(List<IldaPoint> points) {
     this.points.addAll(points);
+  }
+
+  public void addPoint(IldaPoint point) {
+    this.points.add(point);
   }
 
   public void setPoints(List<IldaPoint> points) {

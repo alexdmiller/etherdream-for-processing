@@ -22,5 +22,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="core" level="project" />
+    <orderEntry type="library" name="batikfont" level="project" />
   </component>
 </module>
