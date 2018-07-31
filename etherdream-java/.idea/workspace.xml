@@ -20,8 +20,8 @@
       <file leaf-file-name="Festival.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/spacefiller/festival/Festival.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            <state relative-caret-position="528">
+              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1004#1005#0" expanded="true" />
@@ -107,7 +107,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Etherdream.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Etherdream.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/spacefiller/etherdream/Etherdream.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
@@ -121,6 +121,15 @@
                 <element signature="e#509#510#0" expanded="true" />
                 <element signature="e#536#537#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -163,7 +172,6 @@
         <option value="$PROJECT_DIR$/src/ilda/IldaPoint.java" />
         <option value="$PROJECT_DIR$/src/spacefiller/ilda/IldaPoint.java" />
         <option value="$PROJECT_DIR$/tests/spacefiller/etherdream/EtherdreamDeviceTest.java" />
-        <option value="$PROJECT_DIR$/build.xml" />
         <option value="$PROJECT_DIR$/src/spacefiller/etherdream/ProcessingDebugDraw.java" />
         <option value="$PROJECT_DIR$/src/spacefiller/festival/Mode.java" />
         <option value="$PROJECT_DIR$/src/spacefiller/festival/EditMode.java" />
@@ -171,6 +179,7 @@
         <option value="$PROJECT_DIR$/src/spacefiller/etherdream/EtherdreamDevice.java" />
         <option value="$PROJECT_DIR$/src/spacefiller/festival/AnimateMode.java" />
         <option value="$PROJECT_DIR$/src/spacefiller/etherdream/Etherdream.java" />
+        <option value="$PROJECT_DIR$/build.xml" />
       </list>
     </option>
   </component>
@@ -250,7 +259,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Documents" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
@@ -391,7 +400,7 @@
       <workItem from="1532796597031" duration="7954000" />
       <workItem from="1532811560760" duration="2964000" />
       <workItem from="1532881845947" duration="125000" />
-      <workItem from="1533060196638" duration="9594000" />
+      <workItem from="1533060196638" duration="12427000" />
     </task>
     <servers />
   </component>
@@ -428,7 +437,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47667000" />
+    <option name="totallyTimeSpent" value="50500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1173" extended-state="6" />
@@ -453,7 +462,7 @@
       <window_info anchor="bottom" id="Statistic" order="7" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.010117146" />
+      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.14802982" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39958158" />
@@ -814,13 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/spacefiller/etherdream/EtherdreamDeviceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="670">
@@ -894,18 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/spacefiller/festival/Festival.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1004#1005#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/spacefiller/festival/EditMode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -941,6 +931,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/spacefiller/festival/Festival.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1004#1005#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
@@ -952,7 +961,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1020,7 +1028,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>batikfont</last-edited>
+          <last-edited>core</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

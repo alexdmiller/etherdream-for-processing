@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project name="etherdream-java">
+    <path id="class.path">
+        <fileset dir="/Applications/Processing.app/Contents/Java/core/library/">
+            <include name="*.jar" />
+        </fileset>
+        <fileset dir="/Users/miller/Documents/Processing3/libraries/geomerative/library/">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
     <target name="clean">
         <delete dir="build"/>
     </target>
 
     <target name="compile">
         <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes">
+            <classpath refid="class.path" />
+        </javac>
     </target>
 
     <target name="jar">
         <mkdir dir="build/jar"/>
+
         <jar destfile="build/jar/etherdream-java.jar" basedir="build/classes">
+            <!--<zipgroupfileset dir="dist" includes="*.jar"/>-->
+            <zipgroupfileset dir="/Applications/Processing.app/Contents/Java/core/library/" includes="*.jar"/>
+            <zipgroupfileset dir="/Users/miller/Documents/Processing3/libraries/geomerative/library/" includes="*.jar"/>
+            <manifest>
+                <attribute name="Main-Class"
+                           value="spacefiller.festival.Festival" />
+            </manifest>
         </jar>
     </target>
 
@@ -22,12 +41,11 @@
         </javah>
     </target>
 
-    <target name="run-festival">
+    <target name="run">
         <java
-                classpath="build/classes"
-                classname="spacefiller.festival.Festival"
-                fork="true">
-            <jvmarg value="-Djava.library.path=../etherdream-c/cmake-build-debug/" />
+            jar="build/jar/etherdream-java.jar"
+            fork="true">
+                <jvmarg value="-Djava.library.path=../etherdream-c/cmake-build-debug/" />
         </java>
     </target>
 </project>
