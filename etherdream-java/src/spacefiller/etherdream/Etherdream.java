@@ -1,6 +1,7 @@
 package spacefiller.etherdream;
 
 import processing.core.PApplet;
+import processing.core.PVector;
 import spacefiller.ilda.IldaPoint;
 
 import java.util.HashMap;
@@ -47,39 +48,56 @@ public class Etherdream {
     if (debugDraw) {
       parent.strokeWeight(2);
       for (EtherdreamDevice device : devices.values()) {
-        float lastScreenX = device.points.get(0).x * parent.width + parent.width / 2;
-        float lastScreenY = device.points.get(0).y * parent.height + parent.height / 2;
+        PVector lastScreenPosition = laserToScreen(device.points.get(0));
 
         for (IldaPoint point : device.points) {
-          float screenX = point.x * parent.width + parent.width / 2;
-          float screenY = point.y * parent.height + parent.height / 2;
+          PVector screenPosition = laserToScreen(point);
 
-          if (screenX != lastScreenX && screenY != lastScreenY) {
+          if (!lastScreenPosition.equals(screenPosition)) {
             if (point.a > 0) {
               parent.strokeWeight(1);
-              parent.stroke(parent.color(point.r, point.g, point.b));
-              parent.line(lastScreenX, lastScreenY, screenX, screenY);
+              parent.stroke(parent.color(point.r * 255, point.g * 255, point.b * 255));
+              parent.line(
+                  lastScreenPosition.x, lastScreenPosition.y,
+                  screenPosition.x, screenPosition.y);
 
               parent.strokeWeight(3);
               parent.stroke(parent.color(point.r, point.g, point.b));
               parent.stroke(255);
-              parent.point(screenX, screenY);
+              parent.point(screenPosition.x, screenPosition.y);
             } else {
               parent.strokeWeight(1);
               parent.stroke(100);
-              parent.line(lastScreenX, lastScreenY, screenX, screenY);
+              parent.line(
+                  lastScreenPosition.x, lastScreenPosition.y,
+                  screenPosition.x, screenPosition.y);
 
               parent.noFill();
               parent.stroke(255);
               parent.strokeWeight(1);
-              parent.ellipse(screenX, screenY, 10, 10);
+              parent.ellipse(screenPosition.x, screenPosition.y, 10, 10);
             }
           }
 
-          lastScreenX = screenX;
-          lastScreenY = screenY;
+          lastScreenPosition = screenPosition;
         }
       }
     }
+  }
+
+  public PVector laserToScreen(float x, float y) {
+    return new PVector((x + 1) / 2 * parent.width, (y + 1) / 2 * parent.height);
+  }
+
+  public PVector screenToLaser(float x, float y) {
+    return new PVector(x / parent.width * 2 - 1, y / parent.height * 2 - 1);
+  }
+
+  public PVector laserToScreen(IldaPoint p) {
+    return new PVector((p.x + 1) / 2 * parent.width, (p.y + 1) / 2 * parent.height);
+  }
+
+  public PVector screenToLaser(PVector p) {
+    return new PVector(p.x / parent.width * 2 - 1, p.y / parent.height * 2 - 1);
   }
 }
